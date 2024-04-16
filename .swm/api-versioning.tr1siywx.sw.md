@@ -43,4 +43,20 @@ builder.Services.AddApiVersioningExtension();
 
 </SwmSnippet>
 
+<SwmSnippet path="/WebAPI/Controllers/v1/ProductController.cs" line="12">
+
+---
+
+This code snippet is a class definition for a `ProductController` class that extends `BaseApiController`. It is annotated with `ApiVersion("1.0")`.
+
+```c#
+    [ApiVersion("1.0")]
+    public class ProductController : BaseApiController
+    {
+```
+
+---
+
+</SwmSnippet>
+
 <SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBV2ViQVBJLU9uaW9uJTNBJTNBMTk1MExhYnM=" repo-name="WebAPI-Onion"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

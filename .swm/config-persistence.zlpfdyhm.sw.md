@@ -44,4 +44,34 @@ builder.Services.AddPersistenceInfra(configuration);
 
 </SwmSnippet>
 
+<SwmSnippet path="/Persistence/Repository/AdventureRepositoryAsync.cs" line="12">
+
+---
+
+`public class AdventureRepositoryAsync<T>`: Declares a public class named `AdventureRepositoryAsync` that takes a generic type `T`.
+
+- `: RepositoryBase<T>, IRepositoryAsync<T>`: This class inherits from `RepositoryBase<T>` and implements the interface `IRepositoryAsync<T>`. This indicates that it provides basic repository functionalities (likely CRUD operations) and additional asynchronous operations defined in `IRepositoryAsync<T>`.
+
+- `where T : class`: This is a constraint on the generic type `T`, specifying that `T` must be a class type. This constraint is often used in data access scenarios to ensure that the generic type can represent a database entity.
+
+Overall, this class is designed to serve as a repository for entities of type T using the AdventureWorks database context (AdventureWorkDbContext). Repositories are used in software design to encapsulate the logic required to access data sources, providing a more abstract interface to the data layer of an application. This particular repository is set up to handle asynchronous data operations, making it suitable for performance-sensitive environments like web applications where non-blocking operations are crucial.
+
+```c#
+    public class AdventureRepositoryAsync<T> : RepositoryBase<T>, IRepositoryAsync<T> where T : class
+    {
+        private readonly AdventureWorkDbContext _dbContext;
+        
+        public AdventureRepositoryAsync(AdventureWorkDbContext dbContext) : base(dbContext)
+        {
+            this._dbContext = dbContext;
+        }
+    }
+```
+
+---
+
+</SwmSnippet>
+
+&nbsp;
+
 <SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBV2ViQVBJLU9uaW9uJTNBJTNBMTk1MExhYnM=" repo-name="WebAPI-Onion"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>
