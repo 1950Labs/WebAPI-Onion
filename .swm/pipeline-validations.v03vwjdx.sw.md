@@ -1,5 +1,5 @@
 ---
-title: 'Class: ValidationBehavior<TRequest, TResponse>'
+title: Pipeline Validations
 ---
 <SwmSnippet path="/Application/Beheaviors/ValidationBehavior.cs" line="6">
 
