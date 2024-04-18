@@ -32,7 +32,7 @@ This code snippet defines a `PagedProductSpecification` class that extends the `
 
 </SwmSnippet>
 
-**Ardalis** <SwmToken path="/Application/Specifications/PagedProductSpecification.cs" pos="6:9:9" line-data="    public class PagedProductSpecification : Specification&lt;Product&gt;">`Specification`</SwmToken>
+**Ardalis** `Specification`
 
 In .NET 6, as in other versions of .NET, `Ardalis.Specification` is a library designed to encapsulate the business logic used to retrieve data from a database into a separate specification instead of scattering it throughout the application. It adheres to the Specification Pattern, which helps in crafting queries in a reusable and maintainable manner. The library is typically used with Entity Framework but can be adapted to work with other data access technologies.
 

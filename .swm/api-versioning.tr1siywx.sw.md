@@ -7,11 +7,11 @@ title: Api Versioning
 
 This code snippet adds API versioning extension to the `IServiceCollection` in an [ASP.NET](http://ASP.NET) Core application. It configures the default API version, assumes the default version when unspecified, and enables reporting of API versions.
 
-- **DefaultApiVersion (new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0))**: This setting establishes the default API version as 1.0. When clients do not specify a version in their requests, this default version is used automatically.
+- **DefaultApiVersion (new** <SwmToken path="/WebAPI/Extensions/ServiceExtensions.cs" pos="9:9:18" line-data="                config.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);">`Microsoft.AspNetCore.Mvc.ApiVersion(1,`</SwmToken> **0))**: This setting establishes the default API version as 1.0. When clients do not specify a version in their requests, this default version is used automatically.
 
-- **AssumeDefaultVersionWhenUnspecified (true)**: With this setting enabled, if a client request does not include a version number, the API will assume the default version. This helps to prevent breaking existing clients when versioning is introduced after the API is already in use.
+- <SwmToken path="/WebAPI/Extensions/ServiceExtensions.cs" pos="10:3:3" line-data="                config.AssumeDefaultVersionWhenUnspecified = true;">`AssumeDefaultVersionWhenUnspecified`</SwmToken> **(true)**: With this setting enabled, if a client request does not include a version number, the API will assume the default version. This helps to prevent breaking existing clients when versioning is introduced after the API is already in use.
 
-- **ReportApiVersions (true)**: This option configures the API to include headers in its responses that list the versions available for the used API. This is useful for clients to know which versions are supported and might encourage clients to move to newer versions.
+- <SwmToken path="/WebAPI/Extensions/ServiceExtensions.cs" pos="11:3:3" line-data="                config.ReportApiVersions = true;">`ReportApiVersions`</SwmToken> **(true)**: This option configures the API to include headers in its responses that list the versions available for the used API. This is useful for clients to know which versions are supported and might encourage clients to move to newer versions.
 
 ```c#
         public static void AddApiVersioningExtension(this IServiceCollection services)

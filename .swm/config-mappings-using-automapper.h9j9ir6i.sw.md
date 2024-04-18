@@ -5,7 +5,7 @@ title: Config mappings using AutoMapper
 
 ---
 
-This code snippet defines a class `GeneralProfile` that extends the `Profile` class. It has a constructor that creates mappings between `CreateProductCommand` and `Product` and between `Product` and `ProductDTO`.
+This code snippet defines a class <SwmToken path="/Application/Mappings/GeneralProfile.cs" pos="8:5:5" line-data="    public class GeneralProfile : Profile">`GeneralProfile`</SwmToken> that extends the <SwmToken path="/Application/Mappings/GeneralProfile.cs" pos="8:9:9" line-data="    public class GeneralProfile : Profile">`Profile`</SwmToken> class. It has a constructor that creates mappings between <SwmToken path="/Application/Mappings/GeneralProfile.cs" pos="12:3:3" line-data="            CreateMap&lt;CreateProductCommand, Product&gt;();">`CreateProductCommand`</SwmToken> and <SwmToken path="/Domain/Entities/Product.cs" pos="11:3:3" line-data="        public Product()">`Product`</SwmToken> and between <SwmToken path="/Domain/Entities/Product.cs" pos="11:3:3" line-data="        public Product()">`Product`</SwmToken> and <SwmToken path="/Application/DTOs/ProductDTO.cs" pos="9:5:5" line-data="    public class ProductDTO">`ProductDTO`</SwmToken>.
 
 ```c#
     public class GeneralProfile : Profile
